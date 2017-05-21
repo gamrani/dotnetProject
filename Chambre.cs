@@ -15,12 +15,11 @@ namespace project
 		{
 			return string.Format ("[Chambre: numero={0}, type={1}, categories={2}, prix={3}]", numero, type, categories, prix);
 		}
-
 		public Chambre (int numero, types type, categories categories, int prix)
 		{
 			this.numero = numero;
-			this.type = types.Double;
-			this.categories = categories.Confort;
+			this.type = type;
+			this.categories = categories;
 			this.prix = prix;
 		}
 		

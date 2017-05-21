@@ -14,6 +14,11 @@ namespace project
 			this.matricule = "";
 			this.fonction = "";
 		}
+		public override string ToString ()
+		{
+			return string.Format ("[Personnel: matricule={0}, fonction={1}, Matricule={2}, Fonction={3}]", matricule, fonction, Matricule, Fonction);
+		}
+		
 		public Personnel(string nom,string prenom,string adresse,string matricule,string fonction)
 		{
 			this.nom=nom;

@@ -11,6 +11,24 @@ namespace project
 		private List<Personnel> personnels ;
 		private Personnel derigeant ;
 		private List<Chambre> chambres ;
+		private List<Client> clients ;
+
+
+
+		public void ajouterClient(Client c){
+			clients.Add (c);
+		}
+		public void ajouterPersonnel(Personnel p){
+			personnels.Add (p);
+		}
+
+		public List<Client> listClients (){
+			return clients;
+		}
+		public List<Personnel> listPersonnels (){
+			return personnels;
+		}
+
 
 		public Hotel ()
 		{
@@ -27,6 +45,14 @@ namespace project
 			ville = "";
 			this.personnels=personnels;
 			derigeant = d;
+		}
+		public List<Chambre> Chambres {
+			get {
+				return this.chambres;
+			}
+			set {
+				chambres = value;
+			}
 		}
 		public string Nom {
 			get {
@@ -55,6 +81,11 @@ namespace project
 			}
 		}
 
+		public override string ToString ()
+		{
+			return string.Format ("[Hotel: nom={0}, adresse={1}, ville={2}, personnels={3}, derigeant={4}, chambres={5}, Chambres={6}, Nom={7}, Adresse={8}, Ville={9}, Personnels={10}, Derigeant={11}]", nom, adresse, ville, personnels, derigeant, chambres, Chambres, Nom, Adresse, Ville, Personnels, Derigeant);
+		}
+		
 		public List<Personnel> Personnels {
 			get {
 				return this.personnels;
