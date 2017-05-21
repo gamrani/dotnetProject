@@ -38,13 +38,12 @@ namespace project
 			personnels=new List<Personnel>();
 			derigeant = null;
 		}
-		public Hotel (string nom,string prenom,string ville,List<Personnel> personnels,Personnel d)
+		public Hotel (string nom,String adresse,string ville)
 		{
 			nom = "";
 			adresse = "";
 			ville = "";
-			this.personnels=personnels;
-			derigeant = d;
+
 		}
 		public List<Chambre> Chambres {
 			get {
