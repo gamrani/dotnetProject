@@ -11,6 +11,18 @@ namespace project
 		private types type ;
 		private categories categories ;
 		private int prix ; 
+		public override string ToString ()
+		{
+			return string.Format ("[Chambre: numero={0}, type={1}, categories={2}, prix={3}]", numero, type, categories, prix);
+		}
+
+		public Chambre (int numero, types type, categories categories, int prix)
+		{
+			this.numero = numero;
+			this.type = types.Double;
+			this.categories = categories.Confort;
+			this.prix = prix;
+		}
 		
 		public Chambre ()
 		{
